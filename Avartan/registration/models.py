@@ -12,7 +12,7 @@ class User(AbstractUser):
     course  = models.CharField(max_length=50)
     sem     = models.IntegerField(default=1)
     city    = models.CharField(max_length = 50)
-    otp     = models.IntegerField()
+    otp     = models.IntegerField(default = 000000)
     is_verified = models.BooleanField(default=False)
     
 
