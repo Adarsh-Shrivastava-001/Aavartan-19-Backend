@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from Events.models import Event
 
 # Create your models here.
 
@@ -14,6 +15,7 @@ class User(AbstractUser):
     city    = models.CharField(max_length = 50)
     otp     = models.IntegerField(default = 000000)
     is_verified = models.BooleanField(default=False)
+    events = models.ManyToManyField(to= Event, related_name="events")
     
 
     def __str__(self):

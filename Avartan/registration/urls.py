@@ -19,5 +19,7 @@ urlpatterns = [
     path('<int:pk>/', views.UserDetailView.as_view()),
     path('rest-auth/', include('rest_auth.urls')),
     path('verify/', views.OTPView.as_view()),
+    path('register/', views.EventRegView.as_view()),
+
 
 ]
