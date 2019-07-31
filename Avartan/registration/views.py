@@ -57,6 +57,11 @@ class EventRegView(APIView):
         content = {'message':message}
         return Response(content)
 
+class GetUser(APIView):
 
-
-    
+    def get(self, request):
+        user= request.user
+        print(type(user))
+        if user.is_anonymous:
+            return Response({'username':'None'})
+        return Response({'username':user.username})

@@ -20,6 +20,7 @@ urlpatterns = [
     path('rest-auth/', include('rest_auth.urls')),
     path('verify/', views.OTPView.as_view()),
     path('register/', views.EventRegView.as_view()),
+    path('get/', views.GetUser.as_view()),
 
 
 ]
