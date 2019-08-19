@@ -25,7 +25,7 @@ SECRET_KEY = 'o2irw%o*9-#apgw6m%mqn)=o=wl3pyg0q*%^^rq9)_6@am%mn5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -87,7 +87,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Avartan.urls'
-AUTH_USER_MODEL = "registration.User" 
+AUTH_USER_MODEL = "registration.User"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -112,8 +112,13 @@ WSGI_APPLICATION = 'Avartan.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'aavartan_db',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST’: ''/var/lib/mysql/mysql.sock',
+        'PORT': '3306',
+
     }
 }
 
