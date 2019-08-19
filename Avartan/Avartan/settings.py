@@ -115,8 +115,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'aavartan_db',
         'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST’: ''/var/lib/mysql/mysql.sock',
+        'PASSWORD': 'idontknow',
+        'HOST': '/var/lib/mysql/mysql.sock',
         'PORT': '3306',
 
     }
